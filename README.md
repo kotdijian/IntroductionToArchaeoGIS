@@ -10,11 +10,11 @@
 
 ## Pythonコード
 
-本リポジトリは、書籍とウェブページで言及するPythonコードの公開先です。コードは今後、対応する章・節と結び付けて追加します。
+本リポジトリは、書籍とウェブページで言及するPythonコードの公開先です。最初のスクリプトは[地理院DEMの変換と結合](GML-DEMmerge/README.md)です。今後も対応する章・節と結び付けて追加します。
 
 ## Pythonの導入とディレクトリ操作
 
-QGISを画面で操作するだけなら、この節の準備は不要です。書籍やウェブページで紹介するPythonコードを、自分のパソコンで実行するための準備を説明します。**現在、このリポジトリにはPythonスクリプトと `requirements.txt` はまだありません。** まずはPythonの導入、作業場所の確認、仮想環境の作成まで進められます。
+QGISを画面で操作するだけなら、この節の準備は不要です。書籍やウェブページで紹介するPythonコードを、自分のパソコンで実行するための準備を説明します。最初のスクリプトは `GML-DEMmerge/` にあります。まずPythonの導入、作業場所の確認、仮想環境の作成を行い、そのフォルダのREADMEに従って実行します。
 
 **GUIとCLIの違い：** GUI（Graphical User Interface）は、画面上のアイコンやメニューをマウス・トラックパッドで操作する方法です。macOSのFinderやWindowsのエクスプローラーでフォルダを開くのが一例です。CLI（Command Line Interface）は、文字の命令（コマンド）を入力して操作する方法です。たとえば、CLIでは `cd` コマンドを使って作業するフォルダを切り替えます。macOSとWindowsはどちらもGUIとCLIを使えます。
 
@@ -49,10 +49,11 @@ py -3.13 --version
 
 ```text
 IntroductionToArchaeoGIS-main/
-├── README.md     ← いま読んでいる説明
-├── LICENSE       ← ライセンス全文
-├── index.html    ← ウェブページ
-└── style.css     ← ウェブページの見た目
+├── README.md          ← いま読んでいる説明
+├── LICENSE            ← ライセンス全文
+├── index.html         ← ウェブページ
+├── style.css          ← ウェブページの見た目
+└── GML-DEMmerge/      ← 地理院DEMの変換と結合
 ```
 
 後で作る `.venv/` は自分のパソコン内の作業用フォルダです。GitHubにアップロードする対象ではありません。
@@ -131,14 +132,17 @@ PowerShellで `Activate.ps1` の実行が制限された場合は、設定を変
 
 作業を終えるときは `deactivate` で仮想環境を抜けます。ターミナルを閉じても `.venv/` は残ります。次回はプロジェクトのルートへ `cd` してから、有効化の行（macOSでは `source ...`、Windowsでは `Activate.ps1`）だけをもう一度実行します。
 
-### 5. Pythonコードが追加されたら
+### 5. Pythonコードを実行する
 
-現在は `requirements.txt` がないため、別のプロジェクトの依存パッケージ一覧を流用したり、`pip install -r requirements.txt` を実行したりしないでください。コードが追加された際には、必要なファイルと実行コマンドを各章・節に記載します。`requirements.txt` が置かれた場合は、仮想環境を有効にし、ルートディレクトリで次を実行します。
+コードごとに必要な準備と実行コマンドは、各フォルダのREADMEに記載します。地理院DEMのスクリプトでは、仮想環境を有効にして `GML-DEMmerge` フォルダへ移動し、そのフォルダの `requirements.txt` を使います。入力・出力データは公開リポジトリへ追加しないでください。
 
 ```bash
+cd GML-DEMmerge
 python -m pip install -r requirements.txt
-python -m pip check
+python dem_merge.py
 ```
+
+詳しい入力ファイルの置き方と確認方法は[GML-DEMmergeのREADME](GML-DEMmerge/README.md)を参照してください。
 
 仮想環境の作成と有効化の仕組みは、[Python公式ドキュメント](https://docs.python.org/3.13/library/venv.html)でも確認できます。
 

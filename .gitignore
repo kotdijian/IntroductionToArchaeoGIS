@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+inputGML/
+output/
+GML-DEMmerge/inputGML/
+GML-DEMmerge/output/
