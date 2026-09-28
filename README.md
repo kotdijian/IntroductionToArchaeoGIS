@@ -16,7 +16,11 @@
 
 QGISを画面で操作するだけなら、この節の準備は不要です。書籍やウェブページで紹介するPythonコードを、自分のパソコンで実行するための準備を説明します。**現在、このリポジトリにはPythonスクリプトと `requirements.txt` はまだありません。** まずはPythonの導入、作業場所の確認、仮想環境の作成まで進められます。
 
-「ターミナル」（macOS）や「PowerShell」（Windows）は、文字で指示を入力する画面です。以下のコマンドはその画面に入力します。`>>>` と表示されるPythonの対話画面に入った場合は、`exit()` と入力してターミナルまたはPowerShellに戻ってください。
+**GUIとCLIの違い：** GUI（Graphical User Interface）は、画面上のアイコンやメニューをマウス・トラックパッドで操作する方法です。macOSのFinderやWindowsのエクスプローラーでフォルダを開くのが一例です。CLI（Command Line Interface）は、文字の命令（コマンド）を入力して操作する方法です。たとえば、CLIでは `cd` コマンドを使って作業するフォルダを切り替えます。macOSとWindowsはどちらもGUIとCLIを使えます。
+
+macOSの「ターミナル」やWindowsの「PowerShell」は、CLIで操作するためのアプリです。以下のコマンドは、これらの画面に1行ずつ入力し、Returnキー（WindowsではEnterキー）で実行します。フォルダやディレクトリの意味と移動方法は手順2・3で説明します。
+
+`python` や `py` だけを実行して `>>>` が表示された場合は、**Python対話モード**に入っています。この画面では `cd` などのターミナル・PowerShell用コマンドを実行できません。終了して元の画面に戻るには、`>>>` の後で `exit()` と入力しReturn／Enterキーを押します。キー操作なら、**macOSはControl＋D**、**WindowsはCtrl＋Zを押してからEnter**です。終了操作は入力待ちの `>>>` が表示された状態で行います。`>>>` 自体は画面上の目印なので入力しません。詳しくは[Python 3.13の公式説明](https://docs.python.org/3.13/tutorial/interpreter.html)を参照してください。
 
 ### 1. Python 3.13をインストールする
 
