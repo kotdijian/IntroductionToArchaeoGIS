@@ -24,7 +24,7 @@ macOSの「ターミナル」やWindowsの「PowerShell」は、CLIで操作す�
 
 ### 1. Python 3.13をインストールする
 
-この説明では、[既存の実習プロジェクト](https://github.com/kotdijian/ArtefactsOrthoMaker/blob/main/README.md#environment)と同じPython 3.13系を使います。すでに3.13系が入っていて、下記のバージョン確認が通る場合は再インストール不要です。
+この手順ではPython 3.13系を使用します。すでにPython 3.13系がインストールされ、下記のバージョン確認が通る場合は再インストール不要です。
 
 **macOS：** [Python公式サイト](https://www.python.org/downloads/)からPython 3.13系のmacOS用インストーラを入手して実行します。インストール後、`/Applications/Python 3.13/` にある `Install Certificates.command` も実行します。ターミナルを開き、次を入力して `Python 3.13.x` と表示されることを確認します。
 
